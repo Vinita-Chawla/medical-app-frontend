@@ -33,7 +33,7 @@ const Footer = ()=> {
         <h3>Stay in Touch</h3>
         <form  action="https://formspree.io/f/movawyvn" method="POST">
          
-        <label for="newsletter_email">Your Email</label> 
+        <label htmlFor="newsletter_email">Your Email</label> 
         <input
             type="email"
             name="newsletter_email"

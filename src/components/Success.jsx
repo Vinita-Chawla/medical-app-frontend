@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link} from "react-router-dom"
+import { useDispatch } from 'react-redux';
+import { itemsRemoved } from '../store/slices/cartSlice';
 
 
 function Success() {
+
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(itemsRemoved())
+  },[])
   
   return (
     <div class="sc-container">

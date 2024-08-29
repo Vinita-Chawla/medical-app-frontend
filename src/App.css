@@ -12,7 +12,7 @@
 }
 
 body{
-  background-color: #F7EFE5;
+  background-color: white;
 }
 p, h1, h2, ul {
   margin: 0;
@@ -27,159 +27,10 @@ html {
   font-size: 80%;
 }
 
-/* center logo css */
-.centerLogo {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.store {
-  font-size: 0.8rem;
-  letter-spacing: 2rem;
-}
-
-.logo {
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-@media (max-width: 400px) {
-  .logo {
-    font-size: 1.5rem;
-  }
-}
-
-/* recipe banner css starts */
-.recipe_banner {
-  background: url('./images/banner.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  object-fit: cover;
-}
-/* recipe banner css ends */
-
-/* Modal Styling */
-.modal {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-}
-
-.modal-content {
-  background: #F7EFE5;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 70%;
-  max-height: 90%;
-  overflow-y: auto;
-  position: relative;
-}
-
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Subscription Plan Card Styling */
-.card {
-  position: relative;
-  background: linear-gradient(-45deg, #674188, #C8A1E0);
-  border-radius: 15px;
-  margin: 1rem auto;
-  padding: 1rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.5s;
-  display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card .title .fa {
-  font-size: 2rem;
-}
-
-.title h2 {
-  font-size: 1.5rem;
-}
-
-.price h4 {
-  font-size: 2rem;
-}
-
-.option ul li {
-  font-size: 0.9rem;
-}
 
 
-.card a {
-  background: #fff;
-  color : black;
-  border-radius: 40px;
-  display: block;
-  text-align: center;
-  font-size: 1rem;
-  cursor: pointer;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-    width: fit-content;
-    padding: 0.5rem 0.9rem;
-    margin-top: 0.5rem;
-    text-decoration: none;
 
-}
 
-.title{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.title .fa{
-  color:#fff;
-  font-size: 60px;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-@media (min-width: 600px) and (max-width: 1024px) {
-  .modal-content {
-    padding: 1rem;
-  }
-
-  .title h2 {
-    font-size: 1.2rem;
-  }
-
-  .price h4 {
-    font-size: 1.5rem;
-  }
-
-  .option ul li {
-    font-size: 0.8rem;
-  }
-
-  .card a {
-    font-size: 0.8rem; 
-  }
-}
 
 
 /* Success css starts */
@@ -217,199 +68,25 @@ html {
 /* Success css ends */
 
 
-/* recipe detail page css starts */
 
-.wrapper {
-  padding: 1rem 2rem;
-  max-width: 53.83rem;
-  margin: auto;
-}
-.wrapper section {
-  margin: 3rem 0;
-}
-
-.header {
-  margin: 0 0 3rem;
-}
-.header .header__title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2rem;
-  color: #674188;
-  margin-bottom: 2rem;
-}
-
-@media(max-width:450px){
-  .header .header__title {
-    font-size: 1.5rem;
-  }
-}
-.header .header__description {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 1rem;
-}
-.header .header__description .header__description--icon {
-  margin-right: 1rem;
-}
-.header .header__description .header__description--text {
-  max-width: 50rem;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.1rem;
-  color: #4f4f4f;
-}
-
-.hero > img {
-  width: 100%;
-  border-radius: 0.66rem;
-}
-
-.time .servings {
-  display: flex;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.time .servings .servings__icon {
-  margin-right: 0.5rem;
-}
-.time .servings .servings__title {
-  display: block;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #bdbdbd;
-}
-.time .servings .servings__count {
-  display: block;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  color: #f2994a;
-}
-.time .preparation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-.time .preparation .preparation__card {
-  display: flex;
-}
-.time .preparation .preparation__card .preparation__card_icon {
-  margin-right: 0.5rem;
-}
-.time .preparation .preparation__card .preparation__card_text--label {
-  display: block;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #bdbdbd;
-}
-.time .preparation .preparation__card .preparation__card_text--time {
-  display: block;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  color: #333333;
-}
-@media screen and (min-width: 700px) {
-  .time {
-    margin-top: 2rem;
-    padding: 2rem 3rem;
-    background: #ffffff;
-    box-shadow: 0 0 1.11rem rgba(0, 0, 0, 0.1);
-    border-radius: 0.66rem;
-  }
- 
-  .time .preparation > * {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.ingredients .ingredients__title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.7rem;
-  color: #333333;
-  margin-bottom: 1.5rem;
-}
-.ingredients .item .item__title {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 1rem;
-  color: #333333;
-}
-.item__ingredients{
-  display: flex;
-  gap:0.6rem;
-  align-items: center;
-}
-.ingredients .item .item__ingredients label {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.2rem;
-  color: #333333;
-}
-
-.instructions .instructions__title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.7rem;
-  color: #333333;
-  margin-bottom: 1.5rem;
-}
-.instructions .instructions__list {
-  counter-reset: my-awesome-counter;
-  list-style: none;
-  padding-left: 3rem;
-}
-.instructions .instructions__list .instructions__element {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.1rem;
-  color: #000000;
-  margin: 0 0 3rem 0;
-  counter-increment: my-awesome-counter;
-  position: relative;
-}
-.instructions .instructions__list .instructions__element::before {
-  content: counter(my-awesome-counter);
-  position: absolute;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.33rem;
-  color: #ffffff;
-  --size: 1.77rem;
-  left: calc(-1 * var(--size) - 1rem);
-  height: 2rem;
-  width: 2rem;
-  top: 0;
-  background: #f2994a;
-  border-radius: 0.33rem;
-  text-align: center;
-}
-
-/* recipe detail page css ends */
 
 
 
 /* Footer css starts */
 footer {
   bottom: 0;
-  background: #674188;
-  color: white;
+  background: white;
+  color: black;
 }
 
-/* Bottom - copyright and legal stuff */
 
 footer .info {
   padding: 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #674188;
+  background: black;
+  color: white;
 }
 
 footer .info .legal {
@@ -420,8 +97,6 @@ footer .info .legal {
 footer .info .legal > a {
   margin-right: 15px;
 }
-
-/* Middle - social media links */
 
 footer .social {
   padding: 1.5rem 0;
@@ -448,8 +123,6 @@ footer .social:before {
   transform: translateX(-50%);
 }
 
-/* Top - pages, email newsletter form ... */
-
 footer .top {
   padding: 2rem 0;
   display: flex;
@@ -475,7 +148,7 @@ footer .top .pages ul li {
   margin: 5px;
 }
 footer .top .pages ul li a{
-  color: white;
+  color:black;
   text-decoration: none;
 }
 
@@ -490,13 +163,13 @@ footer .newsletter form {
 }
 footer .newsletter form #newsletter_email {
   padding:0.3rem 0.6rem;
-  border:1px solid #FFF;
+  border:1px solid black;
   border-radius: 3px;
   outline: none;
 }
 footer .newsletter form .submit{
-  background-color: white;
-  color:#674188;
+  background-color: black;
+  color:white;
   padding: 0.3rem 0.6rem;
   border-radius: 3px;
 
@@ -506,7 +179,6 @@ footer .info {
 }
 
 
-/* Responsive adjustments */
 @media screen and (max-width: 768px) {
   footer .top {
     flex-direction: column;
@@ -540,90 +212,78 @@ footer .info {
     justify-content: center;
     flex-direction: column;
   }
-
-
-  
+ 
 }
 
 /* Footer css ends */
 
 
-
-/* About section css starts */
-.about{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
-.about h1{
-  position: relative;
-  font-size: 2rem !important;
-  color: #674188;
-  font-weight: bold;
-}
-.about h1::after{
-  content: "";
-  width:40px;
-  height: 0.3rem;
-  background-color: #674188;
-  position: absolute;
-  bottom: -25%;
-  left: 31%;
-}
-.about_below{
-  width:50%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-.about_below h5{
-  font-size: 1.2rem;
-}
-.about_below p{
-  font-size: 1rem;
-  line-height: 2rem;
-}
-.overlay2{
-  opacity: .5;
+/* Login signup css starts */
+.form-container{
+  background: white;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding:3rem;
 }
 
+@media(max-width:400px){
+  .form-container{
+    padding: 3rem 1.5rem;
+  }
+}
 
-.detailpadding{
-  padding: 3rem;
-}
-.detailContainer{
-  display: flex;
+.social-container a {
+  border: 2px solid #dddddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
 }
-.productDetail{
+/* Login signup css ends */
+
+
+/* home page css starts */
+.homebg{
+  background:url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 770px) {
+  .homebg{
+    padding-top:12rem;
+  }
+}
+
+.home-img{
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.5rem;
+  padding-left: 2rem;
 }
-.productImg{
-  display: flex;
-  justify-content: center;
+.home-img1{
+  background:url('./images/01.jpg');
 }
-.mainHeading{
-  font-size: 2rem !important;
-  color: #674188;
-  font-weight: bold;
+.home-img2{
+  background:url('./images/02.jpg');
 }
-@media(max-width:780px){
-  .detailContainer {
-   flex-wrap: wrap;
+.home-img3{
+  background:url('./images/03.jpg');
 }
-.about_below{
-  width: 90%;
+.home-img4{
+  background:url('./images/04.jpg');
 }
-.productImg img{
-  width: 80%;
+.home-img5{
+  background:url('./images/05.jpg');
 }
-}
-/* About section css ends */
+/* Home page css ends */

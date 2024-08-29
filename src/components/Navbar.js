@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { Link, useNavigate} from "react-router-dom";
+import { toast } from 'react-toastify'
 
 const Navbar = () => {
   const [menuBtn, setMenuBtn] = useState(false);
@@ -28,7 +29,9 @@ const Navbar = () => {
 
   const userLogout = ()=>{
     localStorage.removeItem("user");
-    localStorage.removeItem("auth");
+    localStorage.removeItem("token");
+
+    toast.success(`Logout Successful!`)
     setTimeout(() => {
       navigate("/login")
     }, 1000);
@@ -39,82 +42,90 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full bg-[#F7EFE5] shadow-md z-50 shadow-md shadow-black-300/40 ">
+      <header className="flex flex-col fixed top-0 left-0 w-full bg-white shadow-md z-50 shadow-md shadow-black-300/40 ">
+        <div className="pt-[0.5rem] px-[0.5rem] flex justify-center items-center gap-[0.5rem] md:justify-between flex-col md:flex-row ">
+        <div>
+          <p className="text-[1rem] hidden sm:block text-center">♥ Welcome to Medibazar. We provides medical accessories</p>
+        </div>
+        <div className="flex gap-[1rem]">
+       {
+        auth?   
+        <Link className="no-underline text-black" onClick={userLogout}><i className="fas fa-sign-out"></i> Logout</Link>
+        :
+        <Link to="/login" className="no-underline text-black"><i className="fas fa-user-circle"></i> My Account</Link>
+       }
+        <Link to="/cartItems" className="no-underline text-black"><i className="fas fa-cart-plus"></i> Cart</Link>
+        <Link to="/wishlistItems" className="no-underline text-black"><i className="far fa-heart"></i> Wishlist</Link>
+        </div>
+        </div>
         <div className="flex items-center justify-between w-full gap-4 py-[0.9rem] px-8">
+
+        <div>
+        <img src="./images/logo.png" alt=""/>
+        </div>
       
-
-{
-  auth ? 
-  <div className="flex items-center justify-center gap-[0.6rem]">
-            <img src={user.profile} alt="" className="w-[45px] h-[45px] rounded-[50%]"/>
-            <h5 className="capitalize m-[0] text-[#674188] font-bold">{user.name}</h5>
-          </div>
-          :
-        <h1 className='text-[#674188] font-bold text-[2rem]'>Meal App</h1>
-
-}
-         
 
           <ul
             className={`${
               menuBtn ? "flex" : "hidden"
-            } md:flex flex-col md:flex-row items-center gap-2 p-1 m-0 absolute md:relative top-full md:top-0 right-0 md:right-0 bg-[#F7EFE5] md:bg-transparent w-full md:w-auto transition-all duration-500 ease-in-out`}
+            } md:flex flex-col md:flex-row items-center gap-2 p-1 m-0 absolute md:relative top-full md:top-0 right-0 md:right-0 bg-white md:bg-transparent w-full md:w-auto transition-all duration-500 ease-in-out`}
           >
             <li className="mx-3 my-2 md:my-0" onClick={() => closeMenu()}>
-              <Link className="no-underline text-[#674188] font-medium text-[#674188]" to="/">
+              <Link className="no-underline text-[#6482AD] font-bold" to="/">
                 Home
               </Link>
             </li>
 
             <li className="mx-3 my-2 md:my-0" onClick={() => closeMenu()}>
-              <Link className="text-[#674188] font-medium no-underline text-[#674188]" to="/about">
+              <Link className="no-underline text-[#6482AD] font-bold" to="/about">
                 About
+              </Link>
+            </li>
+
+            <li className="mx-3 my-2 md:my-0" onClick={() => closeMenu()}>
+              <Link className="text-[#6482AD] font-bold no-underline" to="/">
+                Shop
               </Link>
             </li>
            
 
             <li className="mx-3 my-2 md:my-0" onClick={() => closeMenu()}>
-            <Link className="no-underline text-[#674188] font-medium" to="/favorites">Favorites</Link>
+            <Link className="no-underline text-[#6482AD] font-bold" to="/">Categories</Link>
             </li>
             
             <li className="mx-3 my-2 md:my-0" onClick={() => closeMenu()}>
-            <Link className="no-underline text-[#674188] font-medium" to="/submit-recipe">Submit Recipe</Link>
+            <Link className="no-underline text-[#6482AD] font-bold" to="/">Blog</Link>
             </li>
 
             <li className="mx-3 my-2 md:my-0" onClick={() => closeMenu()}>
-            <Link className="no-underline text-[#674188] font-medium" to="/">Contact</Link>
+            <Link className="no-underline text-[#6482AD] font-bold" to="/">Contact</Link>
             </li>
           
-            <li className="mx-3 my-2 md:my-0" onClick={() => closeMenu()}>
-              <Link className="no-underline text-[#674188] font-medium" to="/login">
-                Login
-              </Link>
-            </li>
+           
 
-          {
-            auth?   <li className="mx-3 my-2 md:my-0">
-              <Link
-                className="no-underline text-[#674188] font-medium"
-                onClick={userLogout}
-              >
-                Logout
-              </Link>
-            </li>
-            : ""
-          }
           </ul>
 
+
+      
+         
+
           <div className="flex items-center justify-center gap-[0.5rem]">
-            <div
+          <div
               id="menu-btn"
               onClick={() => setMenuBtn(!menuBtn)}
               className={`${
                 menuBtn ? "fas fa-times" : "fas fa-bars"
-              } text-[#674188] text-[1.4rem] md:hidden cursor-pointer font-bold`}
+              } text-[#6482AD] text-[1.4rem] md:hidden cursor-pointer font-bold`}
             ></div>
 
-           
-
+          { auth ? 
+  <div className="flex items-center justify-center gap-[0.6rem]">
+            <img src={user.profile} alt="" className="w-[35px] h-[35px] rounded-[50%]"/>
+          </div>
+          :
+       ""}
+       
+        
           </div>
         </div>
       </header>
