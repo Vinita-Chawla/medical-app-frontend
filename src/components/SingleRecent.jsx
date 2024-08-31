@@ -23,7 +23,7 @@ const SingleRecent = () => {
             "Content-Type":"application/json"
         }
 
-        let response = await axios.get(`http://localhost:5000/products/singleRecent/${id}`, {headers});
+        let response = await axios.get(`https://medical-app-backend-one.vercel.app/products/singleRecent/${id}`, {headers});
         console.log(response.data)
         setRecentProduct(response.data);
     }

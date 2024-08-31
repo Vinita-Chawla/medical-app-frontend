@@ -13,7 +13,7 @@ function ForgotPassword() {
     let data = {
       email:email
     }
-    let response = await axios.post('http://localhost:5000/auth/forgot-password',data);
+    let response = await axios.post('https://medical-app-backend-one.vercel.app/auth/forgot-password',data);
     console.log(response.data)
     if(response.data.message){
       setEmail("")

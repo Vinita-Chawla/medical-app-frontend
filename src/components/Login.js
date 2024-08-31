@@ -15,7 +15,7 @@ function Login() {
     formData.append("email",email);
     formData.append("password",password);
 
-    let response = await axios.post("http://localhost:5000/auth/login", formData);
+    let response = await axios.post("https://medical-app-backend-one.vercel.app/auth/login", formData);
     console.log(response.data)
     if(response.data.user){
       localStorage.setItem("user",JSON.stringify(response.data.user))
@@ -43,10 +43,10 @@ function Login() {
       <h2 className='text-[#4e97fd] font-bold text-[2rem]'>Sign in</h2>
 
       <div className="social-container">
-          <Link to={`http://localhost:5000/auth/facebook`} className="social">
+          <Link to={`https://medical-app-backend-one.vercel.app/auth/facebook`} className="social">
             <i className="fab fa-facebook-f" />
           </Link>
-          <Link to={`http://localhost:5000/auth/google`} className="social">
+          <Link to={`https://medical-app-backend-one.vercel.app/auth/google`} className="social">
             <i className="fab fa-google-plus-g" />
           </Link>
         </div>

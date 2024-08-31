@@ -14,7 +14,7 @@ const resetPass = async()=>{
   let data = {
     password:password
   }
-  let response = await axios.put(`http://localhost:5000/auth/reset-password/${id}/${token}`,data);
+  let response = await axios.put(`https://medical-app-backend-one.vercel.app/auth/reset-password/${id}/${token}`,data);
   console.log(response.data)
   if(response.data.status === "successful"){
     setMsg("Password Reset Successfully");

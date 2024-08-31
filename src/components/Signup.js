@@ -22,7 +22,7 @@ function Signup() {
     formData.append("verified",false);
 
   
-    let response = await axios.post("http://localhost:5000/auth/register", formData);
+    let response = await axios.post("https://medical-app-backend-one.vercel.app/auth/register", formData);
     console.log(response.data)
 
     if(response.data.user){
@@ -48,10 +48,10 @@ function Signup() {
       <h2 className='text-[#4e97fd] font-bold text-[2rem]'>Create Account</h2>
       
       <div className="social-container">
-          <Link to={`http://localhost:5000/auth/facebook`} className="social">
+          <Link to={`https://medical-app-backend-one.vercel.app/auth/facebook`} className="social">
             <i className="fab fa-facebook-f" />
           </Link>
-          <Link to={`http://localhost:5000/auth/google`} className="social">
+          <Link to={`https://medical-app-backend-one.vercel.app/auth/google`} className="social">
             <i className="fab fa-google-plus-g" />
           </Link>
         </div>

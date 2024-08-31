@@ -24,7 +24,7 @@ function SingleFeatured() {
             "Content-Type":"application/json"
         }
 
-        let response = await axios.get(`http://localhost:5000/products/singleFeatured/${id}`, {headers});
+        let response = await axios.get(`https://medical-app-backend-one.vercel.app/products/singleFeatured/${id}`, {headers});
         console.log(response.data)
         setSingleFeatured(response.data)
     }

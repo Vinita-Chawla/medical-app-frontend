@@ -32,7 +32,7 @@ const Products = () => {
         "Content-Type": "application/json",
       };
       let response = await axios.get(
-        "http://localhost:5000/products/featured",
+        "https://medical-app-backend-one.vercel.app/products/featured",
         { headers }
       );
       setFeaturedProducts(response.data);
@@ -49,7 +49,7 @@ const Products = () => {
         Authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
         "Content-Type": "application/json",
       };
-      let response = await axios.get("http://localhost:5000/products/recent", {
+      let response = await axios.get("https://medical-app-backend-one.vercel.app/products/recent", {
         headers,
       });
       setRecentProducts(response.data);
